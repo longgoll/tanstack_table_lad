@@ -15,7 +15,7 @@ function Lad2() {
         { firstName: '', lastName: '', age: '', visits: '', status: '', progress: '' }
     ])
 
-    const [options, setOptions] = useState([
+    const [options] = useState([
         { value: 'John', label: 'John' },
         { value: 'Jane', label: 'Jane' },
         { value: 'Doe', label: 'Doe' }

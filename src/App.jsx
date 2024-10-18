@@ -68,7 +68,7 @@ const columns = [
 
 function App() {
   const [searchInput, setSearchInput] = useState('');
-  const [data, _setData] = useState(() => [...defaultData])
+  const [data] = useState(() => [...defaultData])
   const rerender = useReducer(() => ({}), {})[1]
 
   const filteredData = useMemo(() => {

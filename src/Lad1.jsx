@@ -69,7 +69,7 @@ const columns = [
 
 function Lad1() {
   const [searchInput, setSearchInput] = useState('');
-  const [data, _setData] = useState(() => [...defaultData])
+  const [data] = useState(() => [...defaultData])
   const [sorting, setSorting] = useState([]);
 
   const filteredData = useMemo(() => {
