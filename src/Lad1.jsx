@@ -1,5 +1,5 @@
 import './index.css'
-import { useState, useMemo } from 'react'
+import { useState, useMemo, useCallback } from 'react'
 import {
   createColumnHelper,
   flexRender,
@@ -85,7 +85,11 @@ function Lad1() {
     onSortingChange: setSorting,
     getCoreRowModel: getCoreRowModel(),
     getSortedRowModel: getSortedRowModel(),
-  })
+  });
+
+  const handleSearchInputChange = useCallback((e) => {
+    setSearchInput(e.target.value);
+  }, []);
 
   return (
     <div className="p-2">
@@ -93,7 +97,7 @@ function Lad1() {
         type="text"
         placeholder="Search first name"
         value={searchInput}
-        onChange={e => setSearchInput(e.target.value)}
+        onChange={handleSearchInputChange}
       />
       <table>
         <thead>
